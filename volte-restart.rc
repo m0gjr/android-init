@@ -1,0 +1,7 @@
+on boot
+	setprop test.volte-restart test
+
+on property:init.svc.volte_imsm_93=stopped
+	exec u:r:su:s0 root -- /system/bin/cmd connectivity airplane-mode enable
+	start volte_imsm_93
+	exec u:r:su:s0 root -- /system/bin/cmd connectivity airplane-mode disable

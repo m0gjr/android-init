@@ -1,0 +1,18 @@
+#!/system/bin/sh
+
+# change these in the overlay to prove script is working
+setprop test.rc_local template
+#setprop test.rc_local start
+
+# escape cgroup to prevent processes being terminated
+#cgroup=/sys/fs/cgroup/$(grep ^0: /proc/self/cgroup | cut -c4-)
+#echo $$ > $cgroup/../cgroup.procs
+
+# commands go here
+
+
+#echo $$ > $cgroup/cgroup.procs
+
+#setprop test.rc_local finish
+
+exit 0

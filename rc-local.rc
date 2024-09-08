@@ -1,0 +1,3 @@
+on boot
+	setprop test.rc_local enabled
+	exec_background u:r:su:s0 root -- /system/etc/rc.local
